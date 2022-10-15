@@ -1,0 +1,36 @@
+{
+  "dependencies": {
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  },
+  "exports": {
+    ".": {
+      "types": "./types/foo.d.ts",
+      "import": "./dist/foo.js"
+    }
+  },
+  "main": "foo.js",
+  "name": "@pkg/foo",
+  "publishConfig": {
+    "@foo:registry": "https://gitlab.default.lima/api/v4/projects/6/packages/npm/",
+    "access": "restricted",
+    "tag": "latest"
+  },
+  "repository": {
+    "directory": "packages/foo",
+    "type": "git",
+    "url": "https://gitlab.default.lima/ui/monorepo-pnpm.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "current-version": "echo $npm_package_name@$npm_package_version"
+  },
+  "type": "module",
+  "types": "types/foo.d.ts",
+  "version": "1.0.0"
+}

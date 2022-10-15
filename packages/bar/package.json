@@ -1,0 +1,37 @@
+{
+  "dependencies": {
+    "@pkg/baz": "workspace:^1.0.0",
+    "@types/react": "^17.0.52",
+    "@types/react-dom": "^17.0.18",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  },
+  "exports": {
+    ".": {
+      "types": "./types/bar.d.ts",
+      "import": "./dist/bar.js"
+    }
+  },
+  "main": "dist/bar.js",
+  "name": "@pkg/bar",
+  "publishConfig": {
+    "@foo:registry": "https://gitlab.default.lima/api/v4/projects/6/packages/npm/",
+    "access": "restricted",
+    "tag": "latest"
+  },
+  "repository": {
+    "directory": "packages/bar",
+    "type": "git",
+    "url": "https://gitlab.default.lima/ui/monorepo-pnpm.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "current-version": "echo $npm_package_name@$npm_package_version"
+  },
+  "type": "module",
+  "types": "types/bar.d.ts",
+  "version": "1.0.0"
+}

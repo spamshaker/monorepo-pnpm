@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/packages/bar/bar.iml" filepath="$PROJECT_DIR$/packages/bar/bar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/packages/baz/baz.iml" filepath="$PROJECT_DIR$/packages/baz/baz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dev/create/create.iml" filepath="$PROJECT_DIR$/dev/create/create.iml" />
+      <module fileurl="file://$PROJECT_DIR$/packages/foo/foo.iml" filepath="$PROJECT_DIR$/packages/foo/foo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/monorepo-pnpm.iml" filepath="$PROJECT_DIR$/monorepo-pnpm.iml" />
+    </modules>
+  </component>
+</project>

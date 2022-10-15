@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "types",
+    "outDir": "dist",
+    "rootDir": "./src"
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "extends": "../../tsconfig.settings.json",
+  "include": [
+    "src"
+  ],
+  "references": [
+    {
+      "path": "../foo"
+    }
+  ]
+}

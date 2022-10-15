@@ -1,0 +1,38 @@
+{
+  "author": "Michał Grzegorzewski",
+  "devDependencies": {
+    "@changesets/cli": "^2.25.2",
+    "nx": "^15.0.4",
+    "typescript": "^4.8.4"
+  },
+  "engineStrict": true,
+  "engines": {
+    "node": ">= 16",
+    "pnpm": ">= 7"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "name": "monorepo-pnpm",
+  "packageManager": "pnpm@7.14.1",
+  "private": true,
+  "publishConfig": {
+    "@foo:registry": "https://gitlab.default.lima/api/v4/projects/6/packages/npm/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.default.lima/ui/monorepo-pnpm.git"
+  },
+  "scripts": {
+    "build": "nx run-many --target=build --all",
+    "build:affected": "nx affected:build",
+    "build:tsc": "tsc -b packages -v",
+    "changed": "pnpm list --filter '...[origin/main]...' --depth -1 --parseable --long",
+    "changed-version": "node ./bin/changed-version.js",
+    "clean": "rm -rf tmp && pnpm -r exec rm -rf dist build types tsconfig.tsbuildinfo",
+    "clean-all": "pnpm clean node_modules && rm -rf node_modules",
+    "print-versions": "pnpm m list --depth -1 --parseable --long",
+    "show:affected": "nx affected:graph",
+    "show:graph": "nx graph",
+    "upgrade-all": "pnpm up -r --workspace"
+  }
+}

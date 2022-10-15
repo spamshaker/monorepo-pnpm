@@ -1,0 +1,37 @@
+{
+  "dependencies": {
+    "@pkg/foo": "workspace:^1.0.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.14.34",
+    "@types/react-dom": "^16.9.17",
+    "typescript": "^4.8.4"
+  },
+  "exports": {
+    ".": {
+      "types": "./types/baz.d.ts",
+      "import": "./dist/baz.js"
+    }
+  },
+  "main": "dist/baz.js",
+  "name": "@pkg/baz",
+  "publishConfig": {
+    "@foo:registry": "https://gitlab.default.lima/api/v4/projects/6/packages/npm/",
+    "access": "restricted",
+    "tag": "latest"
+  },
+  "repository": {
+    "directory": "packages/baz",
+    "type": "git",
+    "url": "https://gitlab.default.lima/ui/monorepo-pnpm.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "current-version": "echo $npm_package_name@$npm_package_version"
+  },
+  "type": "module",
+  "types": "types/baz.d.ts",
+  "version": "1.0.0"
+}
