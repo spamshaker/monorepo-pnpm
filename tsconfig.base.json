@@ -1,7 +1,9 @@
 {
   "extends": "./tsconfig.settings.json",
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
+      "@pkg/create": ["packages/create/src/index.ts"]
     }
   }
 }
